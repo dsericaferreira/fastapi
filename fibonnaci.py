@@ -1,19 +1,20 @@
 import warnings
 warnings.filterwarnings("ignore")
 
-class Fibonacci():
+class Fibonacci:
 
     def __init__(self):
         pass
 
-    def calculate(lista: int):
-        if lista <= 0:
+    @staticmethod
+    def calculate(elementos: int):
+        if elementos <= 0:
             return []
-        elif lista == 1:
+        elif elementos == 1:
             return [0]
-        elif lista == 2:
+        elif elementos == 2:
             return [0, 1]
         else:
-            f = Fibonacci.calculate(lista - 1)
+            f = Fibonacci.calculate(elementos - 1)
             f.append(f[-1] + f[-2])
             return f
